@@ -5,7 +5,7 @@ var API_DAILY = "https://api.openweathermap.org/data/2.5/weather";
 var API_WEEKLY = "https://api.openweathermap.org/data/2.5/onecall";
 var API_KEY = "cd47a4d51d9109b2f5dbb40c33b27a60";
 var API_UNIT = "metric";
-var ICON_URL = "http://openweathermap.org/img/wn/";
+var ICON_URL = "https://openweathermap.org/img/wn/";
 var ICON_EXT = "@2x.png";
 
 var DAILY_DATA = {
@@ -41,28 +41,27 @@ function onWorld(r){
 	});
 }
 
-function onWorldWeather(r){
+function onWorldWeather(r) {
 	console.log(r);
-	 
-var html = '<div class="city">';
-		html += '	<div class="title title-pc">'+r.name+', '+r.sys.country+'</div>';
-		html += '	<div class="icon">';
-		html += '		<img src="'+ICON_URL+r.weather[0].icon+ICON_EXT+'">';
-		html += '	</div>';
-		html += '	<div class="desc-wrap">';
-		html += '		<div class="title title-mobile">'+r.name+', '+r.sys.country+'</div>';
-		html += '			<div class="desc-mobile>';
-		html += '				<div class="temp">';
-		html += '					<span>'+r.main.temp+'</span>℃';
-		html += '			</div>';
-		html += '			<div class="desc">';
-		html += '				<span>'+r.weather[0].main+'</span>';
-		html += '				<span>'+r.weather[0].description+'</span>';
-		html += '			</div>';
-		html += '		</div>';
-		html += '	</div>';
-		html += '</div>';
-$(".world-wrap").append(html);
+	var html  = '<div class="city">';
+			html += '	<div class="title title-pc">'+r.name+', '+r.sys.country+'</div>';
+			html += '	<div class="icon">';
+			html += '		<img src="'+ICON_URL+r.weather[0].icon+ICON_EXT+'">';
+			html += '	</div>';
+			html += '	<div class="desc-wrap">';
+			html += '		<div class="title title-mobile">'+r.name+', '+r.sys.country+'</div>';
+			html += '		<div class="desc-mobile">';
+			html += '			<div class="temp">';
+			html += '				<span>'+r.main.temp+'</span> ℃';
+			html += '			</div>';
+			html += '			<div class="desc">';
+			html += '				<span>'+r.weather[0].main+'</span> / ';
+			html += '				<span>'+r.weather[0].description+'</span>';
+			html += '			</div>';
+			html += '		</div>';
+			html += '	</div>';
+			html += '</div>';
+	$(".world-wrap").append(html);
 }
 
 
