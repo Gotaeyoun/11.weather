@@ -9,7 +9,7 @@
 .home-wrap .title-wrap .title> div{font-size: 5rem; position: absolute; width: 120%; top: 52px; left: 58px; color: #60b11e; text-shadow: 0 0 10px yellowgreen;}
 .home-wrap .city-wrap{flex: 15% 1 0; display: flex; justify-content: center; align-items: center;}
 .home-wrap .city-wrap #city{width: 60%; padding: 0.75rem; font-size: 1.5rem; border: 1px solid #becc91;}
-.home-wrap .title-wrap .title > .sun{position: absolute; top: -100px; left: -50px;}
+.home-wrap .title-wrap .title > .sun{position: absolute; top: -6.25rem; left: -3.125rem;}
 
 
 .daily-wrap{flex: 15% 0 0; display: flex; align-items: center; justify-content: center; border-top: 1px solid #becc91; border-bottom: 1px solid #becc91;}
@@ -27,3 +27,16 @@
 
 
 .info-wrap{visibility:hidden;}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:480px){
+	html,body{font-size: 0.75rem;}
+	.home-wrap .title-wrap .title > .sun{width: 150px; left:0.75rem;}
+}
